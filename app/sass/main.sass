@@ -1,0 +1,1228 @@
+@import libs
+@import fonts
+@import variables
+@import animation
+
+#header
+	position: fixed
+	z-index: 9999
+
+.header
+    top: 0
+    right: 0
+    left: 0
+    background: $bg-color1
+    color: $text-color
+    border-bottom: 1px solid rgb(214, 214, 214)
+    transition: all 0.5s
+    z-index: 10
+.small
+	transition: all 0.5s
+	.header-inner
+		height: 60px
+		transition: all 0.5s
+		&__menu
+			margin: 0 9px
+			transition: all 0.5s
+		&__logo
+			height: 60px
+			transition: all 0.5s
+
+
+.header.nav-up
+	top: -95px
+
+.header-inner
+	position: relative
+	height: 75px
+	margin-right: auto
+	margin-left: auto
+	max-width: 1170px
+	transition: all 0.5s
+	&__logo
+		position: absolute
+		top: 0
+		left: 0
+		width: 225px
+		height: 75px
+		margin: 0 25px
+		padding: 0 15px
+		background: #e7e7e7 url(../img/logo.png) center no-repeat
+		transition: all 0.5s
+	&__menu
+		float: right
+		margin: 9px
+		transition: all 0.5s
+		&_nav-item
+			display: inline
+			padding: 10px 15px
+			& a
+				text-decoration: none
+				color: #3c3c3c
+				padding: 5px 0
+				font-weight: 500
+				font-size: 22px
+				transition: all .1s ease
+				&:hover
+					color: $red
+					border-bottom: 2px solid $red
+	&__menu-mobile
+		display: none
+
+
+.main
+	max-width: 100%
+	position: relative
+	overflow: hidden
+	background-image: url(../img/bg.jpg)
+	background-repeat: no-repeat
+	background-position: 50% 50%
+
+
+.obluchateli-promo
+	max-width: 100%
+	height: 820px
+	margin: 75px auto 80px auto
+	&__separator
+		position: relative
+		width: 100%
+		height: 0
+		left: 0
+		top: 80px
+		bottom: -1px
+		&_inner
+			position: relative
+			height: 100%
+			width: 100%
+			svg
+				height: 100px
+				width: 100%
+				position: absolute
+				top: auto
+				bottom: -1px
+	&__wrapper
+		position: relative
+		margin: 0 auto
+		width: 1170px
+		height: 820px
+	&__body
+		position: relative
+		top: 50px
+
+	// ========= 1. Animation background __interactive =========
+	&__chain, &__ellipse
+		position: absolute
+	&__chain--1
+		top: -45px
+		left: -368px
+		width: 522px
+		height: 453px
+		background: url(../img/chain/obluchateli-promo__chain--1.png) no-repeat
+		animation: chain--1 15s $animate
+
+	&__chain--2
+		top: 0px
+		left: -5px
+		width: 410px
+		height: 426px
+		background: url(../img/chain/obluchateli-promo__chain--2.png) no-repeat
+		animation: chain--2 15s $animate
+	&__chain--3
+		top: 420px
+		left: -230px
+		width: 345px
+		height: 325px
+		background: url(../img/chain/obluchateli-promo__chain--3.png) no-repeat
+		animation: chain--3 15s $animate
+	&__chain--4
+		top: 360px
+		left: 75px
+		width: 470px
+		height: 392px
+		background: url(../img/chain/obluchateli-promo__chain--4.png) no-repeat
+		animation: chain--4 15s $animate
+	&__chain--5
+		top: 180px
+		left: 350px
+		width: 393px
+		height: 361px
+		background: url(../img/chain/obluchateli-promo__chain--5.png) no-repeat
+		animation: chain--5 15s $animate
+	&__chain--6
+		top: 80px
+		left: 680px
+		width: 590px
+		height: 490px
+		background: url(../img/chain/obluchateli-promo__chain--6.png) no-repeat
+		animation: chain--6 15s $animate
+	&__chain--7
+		top: -110px
+		left: 1045px
+		width: 458px
+		height: 493px
+		background: url(../img/chain/obluchateli-promo__chain--7.png) no-repeat
+		animation: chain--7 8s $animate
+	&__chain--8
+		top: 360px
+		left: 950px
+		width: 450px
+		height: 392px
+		background: url(../img/chain/obluchateli-promo__chain--8.png) no-repeat
+		animation: chain--8 10s $animate
+
+	// ========= 2. Section content =========
+	&__title
+		position: absolute
+		left: 100px
+		top: 170px
+		height: 130px
+		width: 540px
+		padding: 25px
+		background: $bg-title
+		box-shadow: -4px 4px 0px 0px rgba(176,176,176,0.85)
+		h1
+			position: relative
+			margin: -50px -50px 0 0
+			font-size: 78px
+			text-transform: uppercase
+			color: $title-color
+			text-align: right
+			font-weight: 500
+			line-height: 1em
+		span
+			position: relative
+			float: right
+			font-size: 33px
+			color: rgb(51, 51, 51)
+			font-weight: 300
+			margin-right: -35px
+	&__content
+		position: absolute
+		background-color: rgb(235, 235, 235)
+		top: 370px
+		height: 140px
+		width: 550px
+		left: 120px
+		padding: 25px 20px
+		z-index: 100
+		h3
+			position: relative
+			font-size: 34px
+			color: $red
+			margin: 0
+			font-weight: 400
+		span
+			position: relative
+			font-size: 31px
+			top: 5px
+			font-weight: 300
+
+	// ========= 3. Section interactive =========
+	&__shit
+		position: absolute
+		top: 100px
+		left: 695px
+		width: 470px
+		height: 469px
+		background: url(../img/recirculators/obluchateli-promo__shit.png) no-repeat
+	&__ellipse--big
+		top: 185px
+		left: 715px
+		width: 459px
+		height: 459px
+		background: url(../img/recirculators/obluchateli-promo__ellipse--big.png) no-repeat
+		animation: big_ellipse 8s infinite linear
+	&__ellipse--small
+		top: 247px
+		left: 775px
+		width: 345px
+		height: 345px
+		background: url(../img/recirculators/obluchateli-promo__ellipse--small.png) no-repeat
+		animation: small_ellipse 15s infinite linear
+	&__bacila--red
+		position: absolute
+		top: 0px
+		left: 500px
+		width: 167px
+		height: 125px
+		background: url(../img/bacila/obluchateli-promo__bacila--red.png) no-repeat
+	&__left
+		position: absolute
+		left: -260px
+		top: 80px
+	// recirculator
+	&__recirculators
+		position: absolute
+		top: 118px
+		right: 105px
+		width: 285px
+		height: 605px
+	&__recirculators-item,
+	&__recirculators-item:after
+		position: absolute
+		width: 88px
+		height: 530px
+		background-repeat: no-repeat
+		background-size: contain
+		background-position: center center
+	&__recirculators-item
+		transition: margin 0.3s linear, transform 0.5s ease
+		&:after
+			content: ''
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			opacity: 0
+			transition: opacity 0.5s ease
+		&:hover
+			transform: scale(1.1)
+		&:hover:after
+			opacity: 1
+	&__recirculators-item--1
+		top: 0
+		left: 0
+		background-image: url(../img/recirculators/obluchateli-promo__recirculators-item--1.png)
+		z-index: 100
+		&:after
+			background-image: url(../img/recirculators/obluchateli-promo__recirculators-item--1--active.png)
+	&__recirculators-item--2
+		top: 74px
+		left: 98px
+		background-image: url(../img/recirculators/obluchateli-promo__recirculators-item--2.png)
+		z-index: 200
+		&:after
+			background-image: url(../img/recirculators/obluchateli-promo__recirculators-item--2--active.png)
+	&__recirculators-item--3
+		top: 15px
+		right: 0px
+		background-image: url(../img/recirculators/obluchateli-promo__recirculators-item--3.png)
+		z-index: 100
+		&:after
+			background-image: url(../img/recirculators/obluchateli-promo__recirculators-item--3--active.png)
+	// position bacila
+	&__recirculators-bacila
+		position: absolute
+		background-repeat: no-repeat
+		background-size: contain
+		background-position: center center
+	&__recirculators-bacila--1,
+	&__recirculators-bacila--4,
+	&__recirculators-bacila--5,
+	&__recirculators-bacila--7
+		width: 21px
+		height: 21px
+		background-image: url(../img/recirculators/obluchateli-promo__recirculators-bacila--1.png)
+	&__recirculators-bacila--2,
+	&__recirculators-bacila--6
+		width: 42px
+		height: 42px
+		background-image: url(../img/recirculators/obluchateli-promo__recirculators-bacila--2.png)
+	&__recirculators-bacila--3
+		width: 37px
+		height: 37px
+		background-image: url(../img/recirculators/obluchateli-promo__recirculators-bacila--3.png)
+	// translition bacila
+	&__recirculators-bacila--1
+		top: -123px
+		left: -25px
+		transition: top 1s ease, left 1s ease, transform 1s ease
+	&__recirculators-bacila--2
+		top: -120px
+		left: 45px
+		transition: top 0.6s ease, left 0.6s ease, transform 0.6s ease
+	&__recirculators-bacila--3
+		top: -70px
+		left: 102px
+		transition: top 0.7s ease, left 0.7s ease, transform 0.7s ease
+	&__recirculators-bacila--4
+		top: -40px
+		left: 155px
+		transition: top 0.5s ease, left 0.5s ease, transform 0.5s ease
+	&__recirculators-bacila--5
+		top: -119px
+		left: 247px
+		transition: top 0.8s ease, left 0.8s ease, transform 0.8s ease
+	&__recirculators-bacila--6
+		top: -103px
+		left: 330px
+		transition: top 0.9s ease, left 0.9s ease, transform 0.9s ease
+	&__recirculators-bacila--7
+		top: -121px
+		left: 430px
+		transition: top 1.2s ease, left 1.2s ease, transform 1.2s ease
+	// transform bacila
+	&__recirculators--active &__recirculators-bacila--1
+		transform: rotate(180deg)
+	&__recirculators--active &__recirculators-bacila--2
+		transform: rotate(-90deg)
+	&__recirculators--active &__recirculators-bacila--3
+		transform: rotate(-120deg)
+	&__recirculators--active &__recirculators-bacila--4
+		transform: rotate(80deg)
+	&__recirculators--active &__recirculators-bacila--5
+		transform: rotate(-400deg)
+	&__recirculators--active &__recirculators-bacila--6
+		transform: rotate(190deg)
+	&__recirculators--active &__recirculators-bacila--7
+		transform: rotate(-180deg)
+	// 1. position transform active item with bacila
+	&__recirculators--active-1 &__recirculators-item--2
+		margin-left: 25px
+	&__recirculators--active-1 &__recirculators-item--3
+		margin-left: -50px
+	&__recirculators--active-1 &__recirculators-bacila--1,
+	&__recirculators--active-1 &__recirculators-bacila--2,
+	&__recirculators--active-1 &__recirculators-bacila--3,
+	&__recirculators--active-1 &__recirculators-bacila--4,
+	&__recirculators--active-1 &__recirculators-bacila--5,
+	&__recirculators--active-1 &__recirculators-bacila--6,
+	&__recirculators--active-1 &__recirculators-bacila--7
+		top: 35px
+		left: 25px
+	// 2. position transform active item with bacila
+	&__recirculators--active-2 &__recirculators-item--1
+		margin-left: -50px
+	&__recirculators--active-2 &__recirculators-item--3
+		margin-left: -50px
+	&__recirculators--active-2 &__recirculators-bacila--1,
+	&__recirculators--active-2 &__recirculators-bacila--2,
+	&__recirculators--active-2 &__recirculators-bacila--3,
+	&__recirculators--active-2 &__recirculators-bacila--4,
+	&__recirculators--active-2 &__recirculators-bacila--5,
+	&__recirculators--active-2 &__recirculators-bacila--6,
+	&__recirculators--active-2 &__recirculators-bacila--7
+		top: 105px
+		left: 125px
+	// 3. position transform active item with bacila
+	&__recirculators--active-3 &__recirculators-item--1
+		margin-left: -50px
+	&__recirculators--active-3 &__recirculators-item--2
+		margin-left: -25px
+	&__recirculators--active-3 &__recirculators-bacila--1,
+	&__recirculators--active-3 &__recirculators-bacila--2,
+	&__recirculators--active-3 &__recirculators-bacila--3,
+	&__recirculators--active-3 &__recirculators-bacila--4,
+	&__recirculators--active-3 &__recirculators-bacila--5,
+	&__recirculators--active-3 &__recirculators-bacila--6,
+	&__recirculators--active-3 &__recirculators-bacila--7
+		top: 50px
+		left: 225px
+
+
+.obluchateli-info
+	max-width: 100%
+	height: 800px
+	background-color: $bg-color3
+	&__separator
+		position: relative
+		width: 100%
+		height: 0
+		left: 0
+		top: -20px
+		bottom: -1px
+		&_inner
+			position: relative
+			height: 100%
+			width: 100%
+			svg
+				position: absolute
+				height: 100px
+				width: 100%
+				top: auto
+				bottom: -1px
+				transform: scaleX(-1)
+	&__wrapper
+		position: relative
+		margin: 0 auto
+		width: 1170px
+		height: 820px
+
+	// ========= 1. Animation background __interactive =========
+	&__bacila
+		position: absolute
+		background-position: center center
+		background-size: cover
+	&__bacila--1
+		top: 0px
+		left: -15px
+		width: 116px
+		height: 119px
+		background-image: url(../img/bacila/obluchateli-info__bacila--1.png)
+		animation: bacila--1 10s $animate
+	&__bacila--2
+		top: 550px
+		left: -2px
+		width: 73px
+		height: 73px
+		background-image: url(../img/bacila/obluchateli-info__bacila--2.png)
+		animation: bacila--2 10s $animate
+	&__bacila--3
+		top: 600px
+		left: 1000px
+		width: 43px
+		height: 42px
+		background-image: url(../img/bacila/obluchateli-info__bacila--3.png)
+		animation: bacila--3 10s $animate
+	&__bacila--4
+		top: 80px
+		left: 800px
+		width: 43px
+		height: 43px
+		background-image: url(../img/bacila/obluchateli-info__bacila--4.png)
+		animation: bacila--4 10s $animate
+	&__bacila--5
+		top: 83px
+		left: 1110px
+		width: 116px
+		height: 119px
+		background-image: url(../img/bacila/obluchateli-info__bacila--5.png)
+		animation: bacila--5 8s $animate
+	&__bacila--red
+		top: 550px
+		left: 500px
+		width: 167px
+		height: 125px
+		background: url(../img/bacila/obluchateli-promo__bacila--red.png) no-repeat	
+
+	// ========= 2. Section content =========
+	&__recirculator
+		position: absolute
+		top: 0
+		left: 765px
+		width: 397px
+		height: 809px
+		background-position: center center
+		background-size: cover
+		background-image: url(../img/recirculators/obluchateli-info__recirculator.png)
+		resize: both
+	&__block
+		position: absolute
+		clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%)
+		left: 0
+		top: 100px
+		padding: 20px
+		height: 162px
+		width: 600px
+		background-color: #f0efef
+		box-shadow: -4px 4px 0px 0px rgba(176,176,176,0.85)	
+		z-index: 2
+		&--title
+			display: inline
+			text-align: left
+			font-size: 47px
+			font-family: $font-pf
+			color: $title-color
+			text-transform: uppercase
+		span
+			font-family: $font-pf
+			font-size: 47px
+			color: white
+			background-color: $red
+			padding: 0 5px
+	&__block-shadow
+		position: absolute
+		content: ""
+		background-color: rgba(176,176,176,0.85)	
+		left: -5px
+		top: 100px
+		padding: 20px
+		width: 600px
+		height: 167px
+		clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%)
+		z-index: 1
+	&__content
+		position: relative
+		width: 660px
+		top: 340px
+		&--item
+			position: relative
+			display: inline-block
+			width: 43%
+			font-size: 19px
+			vertical-align: top
+			color: black
+			padding: 0 20px
+			font-weight: 300
+
+
+.obluchateli-lamp
+	max-width: 100%
+	height: 770px
+	margin: 0px auto
+	&__wrapper
+		position: relative
+		margin: 0 auto
+		width: 1170px
+	&__interactive, &__content
+		position: relative
+		top: 50px
+	// ========= 1. Animation background __interactive =========
+	&__chain, &__lamp, &__pear
+		position: absolute
+		background-position: center center
+		background-size: cover
+	// Animation chain
+	&__chain--1
+		top: 60px
+		left: -199px
+		width: 661px
+		height: 551px
+		background-image: url(../img/lamp/obluchateli-lamp__chain--1.png)
+		transition: transform 1.4s ease
+	&__chain--2
+		top: 46px
+		left: 407px
+		width: 301px
+		height: 363px
+		background-image: url(../img/lamp/obluchateli-lamp__chain--2.png)
+		transition: transform 2.2s ease
+	&__chain--3
+		top: 245px
+		left: 585px
+		width: 342px
+		height: 323px
+		background-image: url(../img/lamp/obluchateli-lamp__chain--3.png)
+		transition: transform 1.8s ease
+	&__chain--4
+		top: 165px
+		left: 790px
+		width: 659px
+		height: 545px
+		background-image: url(../img/lamp/obluchateli-lamp__chain--4.png)
+		transition: transform 2s ease
+	// Animation lamp
+	&__lamp
+		width: 354px
+		height: 296px
+	&__lamp--1
+		top: 70px
+		left: 60px
+		background-image: url(../img/lamp/obluchateli-lamp__lamp--1.png)
+		transition: transform 2.8s ease
+	&__lamp--2
+		top: 170px
+		left: 725px
+		background-image: url(../img/lamp/obluchateli-lamp__lamp--2.png)
+		transition: transform 2.5s ease
+	// Animation pear
+	&__pear--1
+		top: 355px
+		left: 815px
+		width: 127px
+		height: 130px
+		background-image: url(../img/lamp/obluchateli-lamp__pear--1.png)
+	&__pear--2
+		top: 400px
+		left: 885px
+		width: 374px
+		height: 279px
+		background-image: url(../img/lamp/obluchateli-lamp__pear--2.png)
+	// Transform Animation
+	&--active &__chain--1
+		transform: rotate(-15deg)
+	&--active &__chain--2
+		transform: rotate(12deg)
+	&--active &__chain--3
+		transform: rotate(-14deg)
+	&--active &__chain--4
+		transform: rotate(9deg)
+	&--active &__lamp--1
+		transform: rotate(11deg)
+	&--active &__lamp--2
+		transform: rotate(-7deg)
+
+	// ========= 2. Section content =========
+	&__title
+		position: absolute
+		background-color: $bg-title
+		width: 385px
+		height: 140px
+		box-shadow: -4px 4px 0px 0px $red
+		z-index: 100
+		h2
+			font-family: $font
+			font-size: 47px
+			font-weight: 400
+			color: $title-color
+			margin: 0
+			padding: 15px
+	&__img
+		position: absolute
+		left: 260px
+		top: 150px
+		z-index: 50
+		transition: transform 1s ease
+		&:hover
+			transform: scale(1.05)
+	&__left
+		position: absolute
+		left: 60px
+		top: 280px
+		width: 350px
+		background: $bg-title
+		color: black
+		font-size: 19px
+		line-height: 130%
+		font-weight: 300
+		padding: 20px
+		span
+			background-color: $red
+			padding: 0 5px
+			color: white
+	&__right
+		position: absolute
+		top: 530px
+		right: 220px
+		text-align: right
+		width: 310px
+		background: $bg-title
+		color: black
+		font-size: 19px
+		line-height: 130%
+		font-weight: 300
+		padding: 20px
+		span
+			color: $red
+
+
+.obluchateli-device
+	max-width: 100%
+	height: 900px
+	margin: 0 auto
+	background-color: $bg-color2
+	&__wrapper
+		position: relative
+		margin: 0 auto
+		width: 1170px
+		padding-top: 65px
+
+	&__title
+		position: absolute
+		background-color: #ececec
+		width: 660px
+		height: 73px
+		box-shadow: -4px 4px 0px 0px $red
+		z-index: 100
+		h2
+			font-family: $font
+			font-size: 47px
+			font-weight: 400
+			color: $title-color
+			margin: 0
+			padding: 15px
+	&__slider
+		position: relative
+		top: 120px
+		div
+			padding: 0 10px
+		button.slick-next:before,
+		button.slick-prev:before
+			content: ''
+			position: absolute
+			width: 41px
+			height: 70px
+			color: black
+			top: -25px
+		button.slick-next:before
+			background: url(../img/slider/fa-angle-right.png) no-repeat 0 0
+			right: -45px
+		button.slick-prev:before
+			background: url(../img/slider/fa-angle-left.png) no-repeat 0 0
+			left: -45px
+	&__slider--title
+		margin: 10px
+		text-align: center
+		svg
+			color: $red
+			font-size: 30px
+			padding: 0 10px
+		span
+			color: black
+			font-size: 30px
+	&__slider--subtitle
+		margin: 0 0 10px 0
+		text-align: center
+		span
+			color: black
+			font-size: 19px
+			font-weight: 300
+	&__overlay
+		position: relative
+		&-left
+			position: absolute
+			background: url(../img/slider/overlay-left.png) no-repeat 0 0
+			width: 179px
+			height: 472px
+			top: -457px
+			left: 0
+		&-right
+			position: absolute
+			background: url(../img/slider/overlay-right.png) no-repeat 0 0
+			width: 179px
+			height: 472px
+			top: -457px
+			right: 0
+		&_bg-left
+			position: absolute
+			background-color: #f6f6f6
+			width: 100px
+			height: 120px
+			top: -580px
+			left: 0
+		&_bg-right
+			position: absolute
+			background-color: #f6f6f6
+			width: 100px
+			height: 120px
+			top: -580px
+			right: 0
+
+
+.obluchateli-price
+	max-width: 100%
+	height: 1720px
+	margin: 0 auto
+	&__wrapper
+		position: relative
+		margin: 0 auto
+		padding-top: 65px
+		width: 1170px
+	&__title
+		position: absolute
+		background-color: #ececec
+		width: 180px
+		height: 73px
+		box-shadow: -4px 4px 0px 0px $red
+		z-index: 100
+		h2
+			font-family: $font
+			font-size: 47px
+			font-weight: 400
+			color: $title-color
+			margin: 0
+			padding: 15px
+	&__product
+		position: relative
+		top: 100px
+	&__subtitle
+		position: relative
+		text-align: center
+		font-size: 30px
+		padding: 60px 0 20px 0
+		&:nth-child(1)
+			padding-top: 40px
+		svg
+			color: $red
+			padding: 0 10px
+	&__slider
+		display: flex
+		position: relative
+		&_wrapper
+			width: 265px
+			height: 100%
+			max-width: 265px
+			margin: 10px 20px
+			box-sizing: border-box
+			transition: all 0.15s ease-out
+			box-shadow: 0px 0px 0px 2px rgba(0,0,0, .1)
+			background: #fff
+			&:hover
+			    box-shadow: 0px 0px 15px 2px rgba(0,0,0, .1)
+			a
+				text-decoration: none
+		&_photo
+			width: 235px
+			height: 235px
+			max-width: 100%
+			margin: 10px
+			background-position: center center
+			background-repeat: no-repeat
+			background-size: cover
+		&_title
+			color: black
+			padding: 10px
+			font-size: 14px
+			line-height: 1.2
+			font-weight: normal
+		&_subtitle
+			font-size: 14px
+			color: #696969
+			display: block
+			text-align: center
+			margin-top: 15px
+		&_info
+			display: flex
+			background-color: #f1f1f1
+			padding: 8px
+			font-size: 34px
+			font-weight: 300
+			strike.price
+				color: #222
+				font-weight: 300
+			div.price-sale
+				color: $red
+				font-weight: bold
+				margin: 0 10px
+		button.slick-next:before,
+		button.slick-prev:before
+			content: ''
+			position: absolute
+			width: 41px
+			height: 70px
+			color: black
+			top: -25px
+		button.slick-next:before
+			background: url(../img/slider/fa-angle-right.png) no-repeat 0 0
+			right: -25px
+		button.slick-prev:before
+			background: url(../img/slider/fa-angle-left.png) no-repeat 0 0
+			left: -25px
+
+
+.obluchateli-howto
+	max-width: 100%
+	height: 550px
+	margin: 0 auto
+	background-color: $bg-color2
+	&__wrapper
+		position: relative
+		max-width: 1170px
+		margin: 50px auto
+	&__title
+		position: relative
+		background-color: #ececec
+		width: 482px
+		height: 73px
+		top: 60px
+		box-shadow: -4px 4px 0px 0px $red
+		z-index: 100
+		h2
+			font-family: $font
+			font-size: 47px
+			font-weight: 400
+			color: $title-color
+			margin: 0
+			padding: 15px
+	&__icon-block
+		max-width: 1170px
+		top: 130px
+		position: relative
+		&_item
+			background: $bg-color5
+			border: 9px solid #e2e2e2
+			border-radius: 100%
+			width: 180px
+			height: 190px
+			text-align: center
+			position: relative
+			transition: all 1s ease
+			cursor: default
+			&:hover
+				transform: scale(1.1)
+			&-icon
+				top: 40px
+				position: relative
+				svg
+					color: $red
+					font-size: 55px
+			&:nth-child(2)
+				border-color: #cfcfcf
+			&:nth-child(3)
+				border-color: #b6b6b6
+			&:nth-child(4)
+				border-color: #9c9c9c
+			&:nth-child(5)
+				border-color: #7c7c7c
+			&-icon--4
+				background: url(../img/howto/30.png) no-repeat
+				background-size: cover
+				position: relative
+				width: 109px
+				height: 54px
+				margin: 0 auto
+				top: 40px
+				position: relative
+			&-icon--6
+				background: url(../img/howto/70.png) no-repeat
+				background-size: cover
+				position: relative
+				width: 109px
+				height: 54px
+				margin: 0 auto
+				top: 40px
+				position: relative
+			&-text
+				position: relative
+				top: 45px
+				padding: 10px 0
+				font-size: 17px
+				color: black
+				a
+					color: black
+
+
+//.obluchateli-questions
+	max-width: 100%
+	height: 840px
+	margin: 0 auto
+	&__wrapper
+		position: relative
+		max-width: 1170px
+		margin: 0px auto
+		&_form
+			position: relative
+			max-width: 700px
+			top: 180px
+			margin: 0 auto
+	&__title
+		position: relative
+		background-color: #ececec
+		width: 610px
+		height: 73px
+		top: 120px
+		box-shadow: -4px 4px 0px 0px $red
+		z-index: 100
+		h2
+			font-family: $font
+			font-size: 47px
+			font-weight: 400
+			color: $title-color
+			margin: 0
+			padding: 15px
+	&__subtitle
+		h3
+			color: $red
+			font-weight: 300
+			font-size: 30px
+			margin: 10px 0
+	&__feedback
+		&-left
+			background-color: #f7f7f7
+			border: 1px solid rgb(204, 204, 204)
+			padding: 0 25px
+		&-right
+			background-color: #fff
+			border: 1px solid rgb(204, 204, 204)
+			border-left: none
+			padding: 0 25px
+		&--text
+			padding: 20px 0
+			span
+				font-size: 22px
+				color: black
+				font-weight: 300
+		&--phone, &--email
+			padding: 5px 0
+			svg
+				color: $red
+				padding: 0 10px
+				font-size: 20px
+			a
+				font-size: 20px
+				color: rgb(86, 86, 86)
+				font-style: italic
+				text-decoration: none
+				font-weight: 300
+	&__form-group
+		padding: 5px 0
+		&--field
+			width: 97%
+			padding: 
+				left: 10px
+				top: 10px
+				bottom: 10px
+		&--fieldarea
+			width: 97%
+			padding: 
+				left: 10px
+				top: 10px
+				bottom: 10px
+	&__button
+		float: right
+		width: 133px
+		height: 38px
+		background-color: rgb(255, 255, 255)
+		border: 1px solid rgb(204, 204, 204)
+		border-radius: 3px
+		color: $red
+		font-weight: bold
+		font-style: italic
+		margin: 15px 0
+		cursor: pointer
+		transition: all .5s ease
+		&:hover
+			background-color: $red
+			color: #fff
+	&__bg-image--1
+		position: absolute
+		top: 260px
+		left: 80px
+	&__bg-image--2
+		position: absolute
+		top: 180px
+		right: -70px
+	&__bacila
+			position: absolute
+			background-position: center center
+			background-size: cover
+	&__bacila--red
+			top: 260px
+			left: -40px
+			width: 167px
+			height: 125px
+			background: url(../img/bacila/obluchateli-promo__bacila--red.png) no-repeat
+
+
+.obluchateli-questions
+	max-width: 100%
+	height: 840px
+	margin: 0 auto
+	&__wrapper
+		position: relative
+		max-width: 1170px
+		margin: 0px auto
+		&_form
+			position: relative
+			max-width: 700px
+			top: 180px
+			margin: 0 auto
+	&__title
+		position: relative
+		background-color: #ececec
+		width: 610px
+		height: 73px
+		top: 120px
+		box-shadow: -4px 4px 0px 0px $red
+		z-index: 100
+		h2
+			font-family: $font
+			font-size: 47px
+			font-weight: 400
+			color: $title-color
+			margin: 0
+			padding: 15px
+	&__subtitle
+		h3
+			color: $red
+			font-weight: 300
+			font-size: 30px
+			margin: 10px 0
+	&__feedback
+		&-form
+			margin-top: 15px
+		&-send
+			background-color: #f7f7f7
+			border: 1px solid rgb(204, 204, 204)
+			padding: 0 25px
+		&--text
+			padding: 20px 0
+			span
+				font-size: 22px
+				color: black
+				font-weight: 300
+			svg
+				color: $red
+				padding:
+                  left: 15px
+                  right: 5px
+				font-size: 20px
+			a
+				font-size: 20px
+				color: rgb(86, 86, 86)
+				font-style: italic
+				text-decoration: none
+				font-weight: 300
+		&-contact
+			padding: 10px 0
+	&__form-group
+		padding: 5px 0
+		&--field
+			width: 97%
+			padding:
+				left: 10px
+				top: 10px
+				bottom: 10px
+		&--fieldarea
+			width: 97%
+			padding:
+				left: 10px
+				top: 10px
+				bottom: 10px
+			height: 68px
+	&__button
+		float: right
+		width: 133px
+		height: 38px
+		background-color: rgb(255, 255, 255)
+		border: 1px solid rgb(204, 204, 204)
+		border-radius: 3px
+		color: $red
+		font-weight: bold
+		font-style: italic
+		margin: 15px 0
+		cursor: pointer
+		transition: all .5s ease
+		&:hover
+			background-color: $red
+			color: #fff
+	&__bg-image--1
+		position: absolute
+		top: 260px
+		left: 80px
+	&__bg-image--2
+		position: absolute
+		top: 210px
+		right: -70px
+	&__bacila
+			position: absolute
+			background-position: center center
+			background-size: cover
+	&__bacila--red
+			top: 260px
+			left: -40px
+			width: 167px
+			height: 125px
+			background: url(../img/bacila/obluchateli-promo__bacila--red.png) no-repeat
+	&__elipse
+		position: absolute
+		top: 690px
+		left: 300px
+		width: 549px
+		height: 19px
+		background: url(../img/elipse.png) no-repeat
+
+
+#footer
+	max-width: 100%
+	height: 35px
+	margin: 0 auto
+	.footer
+		background-color: #f2f2f2
+		&__wrapper
+			position: relative
+			max-width: 1170px
+			margin: 0 auto
+		&__item
+			&--logo
+			    width: 225px
+			    height: 75px
+			    margin-right: 0
+			    padding: 0
+			    background: url(../img/logo.png) center no-repeat
+	.bottom-bar
+		background-color: #d6d4d4
+		&__wrapper
+			position: relative
+			max-width: 1170px
+			margin: 0 auto
+			padding: 10px 0
+		&__copyright
+			text-align: right
+			font-size: 13px
+			color: rgb(60, 60, 60)
+
+
+
+@import modal
+@import media

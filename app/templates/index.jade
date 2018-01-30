@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+html(lang="en" style="scroll-behavior: smooth")
+    head
+        include include/head.jade
+
+    body
+        include include/preload.jade
+        include include/content.jade
+        include include/foot.jade
+        include include/modal.jade
+
+        a(href="#")
+            span#stop.scrollTop
+                i.fas.fa-sort-up
+
+        include include/scripts.jade
+
+        include include/api/yaCounter.html
+        include include/api/gta.html

@@ -1,0 +1,26 @@
+{
+  "name": "ArmedHTML_euro",
+  "description": "Promo landing page ArmedHTML euro",
+  "main": "index.js",
+  "authors": [
+    "mager"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.7.0",
+    "roboto-fontface": "^0.8.0",
+    "normalize-css": "normalize.css#^7.0.0",
+    "flexboxgrid": "^6.3.2",
+    "bootstrap-validator": "^0.11.9"
+  }
+}

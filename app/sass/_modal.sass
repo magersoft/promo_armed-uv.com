@@ -1,0 +1,203 @@
+.modalbg
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: rgba(0, 0, 0, 0)
+  z-index: 999999
+  -moz-transition: all 0.5s ease-out
+  -webkit-transition: all 0.5s ease-out
+  -o-transition: all 0.5s ease-out
+  transition: all 0.5s ease-out
+  -webkit-transition-delay: 0.2s
+  -moz-transition-delay: 0.2s
+  -o-transition-delay: 0.2s
+  -transition-delay: 0.2s
+  display: block
+  pointer-events: none
+
+  .dialog
+    max-width: 1040px
+    position: relative
+    top: -2000px
+    margin: 10% auto
+    padding: 5px 20px 13px 20px
+    border-radius: 3px
+    background: #fff
+    box-shadow: 0 0 10px #000
+    -moz-box-shadow: 0 0 10px #000
+    -webkit-box-shadow: 0 0 10px #000
+    .ie7
+      filter: progid:DXImageTransform.Microsoft.Shadow(color='#000000', Direction=135, Strength=3)
+  &:target
+    display: block
+    pointer-events: auto
+    background: rgba(0, 0, 0, 0.8)
+    -moz-transition: all 0.5s ease-out
+    -webkit-transition: all 0.5s ease-out
+    -o-transition: all 0.5s ease-out
+    transition: all 0.5s ease-out
+    .dialog
+      top: -90px
+      -moz-transition: all 0.5s ease-out
+      -webkit-transition: all 0.5s ease-out
+      -o-transition: all 0.5s ease-out
+      transition: all 0.5s ease-out
+      -webkit-transition-delay: 0.4s
+      -moz-transition-delay: 0.4s
+      -o-transition-delay: 0.4s
+      -transition-delay: 0.4s
+
+.close
+  background: #222
+  color: #fff
+  line-height: 32px
+  position: absolute
+  right: -12px
+  text-align: center
+  top: -10px
+  width: 30px
+  height: 30px
+  text-decoration: none
+  font-weight: bold
+  border: 3px solid #fff
+  -webkit-border-radius: 12px
+  -moz-border-radius: 12px
+  border-radius: 20px
+  box-shadow: 0 0 10px #000
+  -moz-box-shadow: 0 0 10px #000
+  -webkit-box-shadow: 0 0 10px #000
+  -moz-transition: all 0.5s ease-out
+  -webkit-transition: all 0.5s ease-out
+  -o-transition: all 0.5s ease-out
+  transition: all 0.5s ease-out
+  -webkit-transition-delay: 0.2s
+  -moz-transition-delay: 0.2s
+  -o-transition-delay: 0.2s
+  -transition-delay: 0.2s
+  .ie7
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#000000', Direction=135, Strength=3)
+  &:hover
+    background: $red
+    -moz-transition: all 0.5s ease-out
+    -webkit-transition: all 0.5s ease-out
+    -o-transition: all 0.5s ease-out
+    transition: all 0.5s ease-out
+
+.modalbg:target .dialog
+  height: auto
+
+a.overlay
+  display: block
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  cursor: default
+
+.container
+  height: 100%
+  width: auto
+  position: relative
+.dialog-left
+  display: inline-block
+  width: 48%
+  margin-right: 15px
+  top: 25px
+  position: relative
+  &__slider-for
+    border: 1px solid #d6d6d6
+  &__slider-nav
+    top: 30px
+    width: 85%
+    margin: 0 auto
+    .slider-image-active
+      border: 1px solid #8f8f8f
+    button.slick-next:before,
+    button.slick-prev:before
+      content: ''
+      position: absolute
+      width: 41px
+      height: 70px
+      color: black
+      top: -5px
+    button.slick-next:before
+      background: url(../img/slider/fa-angle-right-m.png) no-repeat 0 0
+      right: -35px
+    button.slick-prev:before
+      background: url(../img/slider/fa-angle-left-m.png) no-repeat 0 0
+      left: -15px
+    img
+      cursor: pointer
+.dialog-right
+  display: inline-block
+  width: 49%
+  position: relative
+  vertical-align: top
+  &__content
+    &-text p
+      font-family: 'HelveticaNeueCyr-Light', sans-serif
+      font-size: 14px
+      color: black
+    h2
+      font-size: 30px
+      font-weight: 400
+    &-specifications
+      h3
+        font-family: 'HelveticaNeueCyr-Light', sans-serif
+      table > tbody > tr > td
+        font-size: 13px
+        color: rgb(128, 128, 128)
+        line-height: 1.5
+        &:nth-child(1)
+          font-family: 'HelveticaNeueCyr-Light', sans-serif
+        &:nth-child(2)
+          font-family: 'HelveticaNeueCyr-Roman', sans-serif
+    &-price
+      display: flex
+      float: right
+      margin: 25px 0 10px 0
+      font-size: 54px
+      strike.price
+        color: #222
+        font-weight: 300
+      div.price-sale
+        color: $red
+        font-weight: bold
+        margin: 0 10px
+
+.slider-image
+  border: 1px solid #d6d6d6
+  margin: 0 10px
+
+a.modalbg__button
+  display: none
+  float: right
+  clear: both
+  width: 133px
+  background-color: rgb(255, 255, 255)
+  border: 1px solid rgb(204, 204, 204)
+  border-radius: 3px
+  color: $red
+  font-weight: bold
+  font-style: italic
+  padding: 12px 0
+  margin: 10px 0
+  text-decoration: none
+  text-align: center
+  transition: all .5s ease
+  &:hover
+    background-color: $red
+    color: #fff
+
+.popup-image
+  border: none
+  padding: 22px 0
+
+.modalimg .dialogimg
+  max-width: 750px
+
+.modalimg:target .dialogimg
+  top: -120px

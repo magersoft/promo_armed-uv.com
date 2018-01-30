@@ -1,0 +1,91 @@
+$font: 'Roboto'
+$font-pf: 'PFDinTextCompPro'
+
+$bg-color1: rgb(239, 239, 239)
+$bg-color2: #f6f6f6
+$bg-color3: #f0f6fb
+$bg-color4: #ebebeb
+$bg-color5: #eeeeee
+$bg-title: #f3f3f3
+$title-color: #484747
+$text-color: #333333
+$red: #850001
+
+$animate: infinite alternate linear
+
+body
+	font-family: $font
+
+hr
+	color: rgba(128, 128, 128, .2)
+	background-color: rgba(128, 128, 128, .2)
+	height: 1px
+	border: none
+
+input[type=text], input[type=email], textarea
+	border: 1px solid #cccccc
+	transition: all .5s ease
+	&:focus
+		border: 1px solid #484747
+		outline: none
+
+#home
+	position: absolute
+	top: -100px
+
+.hidden
+	display: none
+
+.visible
+	display: block
+
+.active, .first
+	color: $red !important
+	border-bottom: 2px solid $red
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-success
+	position: relative
+	font-size: 12px
+	color: rgb(43, 140, 1)
+	font-style: italic
+	text-align: right
+	margin-top: 22px
+	right: 10px
+	width: 175px
+
+.text-danger
+	position: relative
+	font-size: 12px
+	color: red
+	font-style: italic
+	text-align: right
+	margin-top: 28px
+	right: 10px
+	width: 180px
+
+.has-error .form-control
+	border: 1px solid #e74c3c
+
+
+.scrollTop
+	position: fixed
+	right: 3%
+	bottom: 50px
+	background-color: $red
+	padding: 15px 15px 5px 15px
+	border-radius: 100%
+	opacity: 0
+	display: none
+	transition: all 0.4s ease-in-out 0s
+	cursor: pointer
+	z-index: 99999
+	&:hover
+		opacity: 1 !important
+	svg
+		font-size: 25px
+		color: #fff
